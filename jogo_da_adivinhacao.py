@@ -20,14 +20,29 @@ print("Tente adivinhar o número entre 1 e 100")
 #    else:
 #        print("Boa, você acertou!")
 
-palpite = ''
+#palpite = ''
 
-while palpite != numero_secreto:
-    palpite = int(input("Digite o seu palpite: "))
-    if palpite == numero_secreto:
-        print("Isso aí! Você acertou.")
-    elif palpite < numero_secreto:
-        print("Erou! Chuta mais alto.")
-    else:
-        print("Erou! Chuta mais baixo.")
-    
+#while palpite != numero_secreto:
+ #   palpite = int(input("Digite o seu palpite: "))
+ #   if palpite == numero_secreto:
+  #      print("Isso aí! Você acertou.")
+ #   elif palpite < numero_secreto:
+ #       print("Erou! Chuta mais alto.")
+  #  else:
+  #      print("Erou! Chuta mais baixo.")
+   
+while True:
+    try:
+        palpite = int(input("Digite seu palpite: "))
+        tentativas += 1
+
+        if palpite == numero_secreto:
+            print(f"NICE BROTHER! Acertou em {tentativas} tentativas!")
+            break
+        elif palpite < numero_secreto:
+            print("EROU! Chuta mais alto!")
+        else:
+            print("EROU! Chuta mais baixo!")
+    except ValueError:
+        print("Somente números inteiros")
+         
